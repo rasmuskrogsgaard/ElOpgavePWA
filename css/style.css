@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #27282B;
+}
+
+nav{
+    display: flex;
+
+    background-color: #201E1E;
+    justify-content: space-between;
+}
+
+nav li {
+    flex-direction: column;
+     list-style: none;
+     margin: auto;
+     
+}
+
+
+nav li a{
+    text-decoration: none;
+    color: #EBEBEB;
+    
+}
+
+nav img{
+    width: 10vw;
+}
+
+nav, h1{
+    text-transform: uppercase;
+}
+
+/* h2{
+    color: #33B21B;
+} */
+
+h1{
+    text-align: center;
+    color: #EBEBEB;
+}
+
+.circle{
+    display: grid;
+    background-color: #1E1E1E;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border: 5px solid #3B3939;
+}
+
+.dotOne{
+    display: grid;
+    background-color: transparent;
+    width: 55vw;
+    height: 55vw;
+    border-radius: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border: rgba(0, 128, 0, 0.593) dotted;;
+}
+
+.dotTwo{
+    display: grid;
+    background-color: transparent;
+    width: 48vw;
+    height: 48vw;
+    border-radius: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border: green dotted;;
+}
+
+
+
+footer{
+    background-color: #201E1E;
+    margin-top: 200px;
+    padding: 50px;
+    text-align: center;
+}
