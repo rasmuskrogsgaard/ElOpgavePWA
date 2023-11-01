@@ -95,3 +95,15 @@ footer{
     padding: 50px;
     text-align: center;
 }
+
+.circleGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rows{
+    width: 300px;
+    height: 150px;
+    border-radius: 30px;
+
+}
