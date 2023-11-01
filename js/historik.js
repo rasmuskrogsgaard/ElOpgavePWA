@@ -12,8 +12,6 @@ fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
 
       const dataDiv = document.createElement('div');
 
-      const dkkPerKWh = document.createElement('p');
-      dkkPerKWh.textContent = `${firstItem.DKK_per_kWh} DKK pr kwh`;
 
       const timeStart = document.createElement('p');
       timeStart.textContent = `${firstItem.time_start}`;
@@ -21,16 +19,12 @@ fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
       const parsedTime = new Date(firstItem.time_start);
       timeStart.textContent = `${parsedTime.toLocaleString()}`;
       
-      dataDiv.appendChild(dkkPerKWh);
     
       dataDiv.appendChild(timeStart);
-
+        
       container.appendChild(dataDiv);
     } else {
       console.error('error');
     }
   })
   .catch(error => console.error('Error:', error));
-
-
-  

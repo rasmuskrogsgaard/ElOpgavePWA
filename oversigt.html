@@ -2,16 +2,50 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/oversigt.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>Document</title>
 </head>
+
+
 <body>
-   <h2> Oversigt </h2>
+   
+   
+   
+    <!-- navbar -->
+ <nav>
+    <!-- <h2>el-prisen.nu</h2> -->
+   <i><img src="assets/appIcons/windows11/LargeTile.scale-100.png"></i>
+    <li><a href="oversigt.html"> oversigt</a></li>
+    <li><a href="index.html"> lige nu</a></li>
+    <li><a href="historik.html"> historik</a></li> 
+    <a href="index.html" class="back-button">Tilbage</a>   
+
+</nav> 
+  
+<main>
+<h2> Oversigt </h2>
     <div class="circleGrid">
-    <div class="dotOne"></div>
-    <div class="dotOne"></div></div>
-    <div class="rows">
+        <div class="dottedCircle"></div>
+        <div class="dottedCircle"></div>   
+
     </div>
+   <h2>Lavest Pris</h2>
+   <h2>Højeste Pris</h2>
+        <div class="rows">
+            <div id="data-container"></div>
+    </div>
+    
+  
+    </main>
+    <i class="fa-solid fa-gear"></i>
+
+    <footer>
+        <span>  Priserne er <b>ex. moms</b> og afgifter</span>
+        
+        <span> Du viser lige nu priserne for .......</span>
+      </footer>
 </body>
 </html>

@@ -6,19 +6,28 @@
     <title>Elprisen.nu</title>
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/0d87557a34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
    <!-- navbar -->
-    <nav>
-        <!-- <h2>el-prisen.nu</h2> -->
-       <i><img src="assets/appIcons/windows11/LargeTile.scale-100.png"></i>
-        <li><a href="oversigt.html"> oversigt</a></li>
-        <li><a href="ligenu.html"> lige nu</a></li>
-        <li><a href="#"> historik</a></li>    
-    </nav>
-<header>
-    <i class="fa-solid fa-gear"></i>
+ <nav>
+    
+   <i><img src="assets/appIcons/windows11/LargeTile.scale-100.png"></i>
+   <h4>El-prisen</h4>
+    <li><a href="oversigt.html"> oversigt</a></li>
+    <li><a href="index.html"> lige nu</a></li>
+    <li><a href="historik.html"> historik</a></li>    
+</nav> 
+
+<main>
+    <div class="desktopGrid">
+        <!-- lige nu  -->
+<section class="sectionNu">
+    <header>
+     
     <h1>el prisen lige nu</h1>
+
 </header>
 <!-- cirklen -->
 <div class="circle">
@@ -31,10 +40,89 @@
         </div>
     </div>
 </div>
-    <footer>
-      <span>  Priserne er <b>ex. moms</b> og afgifter</span>
-      
-      <span> Du viser lige nu priserne for .......</span>
-    </footer>
+<div class="circleGrid">
+    <div class="circleFrame">
+    <div class="dottedCircle"></div></div>
+    <div class="circleFrame">
+    <div class="dottedCircle"></div></div>
+
+</div>
+</section>
+
+<section class="sectionOversigt">
+
+   
+<h1>Oversigt</h1>
+<div class="rows">
+    <div id="data-container"></div>
+</div>
+<div class="rows">
+    <div id="data-container"></div>
+</div>
+<div class="rows">
+    <div id="data-container"></div>
+</div>
+    
+</section>
+<!-- historik -->
+<section class="sectionHistorik">
+    <h1>Historik</h1>
+    <div class="rows">      
+        <div id="data-container"></div>
+</div>
+<h3>El-priserne d </h3>
+<div class="rows">
+    <div id="data-container"></div>
+</div>
+<div class="rows">
+    <div id="data-container"></div>
+</div>
+<div class="rows">
+    <div id="data-container"></div>
+</div>
+
+</section>
+<section>
+    <div class="w3-container">
+    <i class="fa-solid fa-gear fa-xl" style="color: #0feb46;" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black"></i>
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <p class="modalSettings"><h1>Indstilinger</h1>
+
+            </p>
+            <p>Priser inkl. moms <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label></p>
+            <p>Laveste Pris Alarm <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label></p>
+            <p>Vælg Region <div class="dropdown">
+                <button class="dropbtn">vælg region</button>
+                <div class="dropdown-content">
+                  <a href="#">Jylland</a>
+                  <a href="#">Fyn</a>
+                  <a href="#">Sjælland</a>
+                </div>
+              </div></p>
+            
+          </div>
+        </div>
+      </div>
+    
+                
+</div>
+</section>
+</div>
+</main>
+
+<footer>
+    <span>  Priserne er <b>ex. moms</b> og afgifter</span>
+    
+    <span> Du viser lige nu priserne for .......</span>
+  </footer>
 </body>
 </html>

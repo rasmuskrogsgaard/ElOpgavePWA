@@ -13,17 +13,13 @@ fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
       const dataDiv = document.createElement('div');
 
       const dkkPerKWh = document.createElement('p');
-      dkkPerKWh.textContent = `${firstItem.DKK_per_kWh} DKK pr kwh`;
+      dkkPerKWh.textContent = `${firstItem.DKK_per_kWh} kr`;
 
-      const timeStart = document.createElement('p');
-      timeStart.textContent = `${firstItem.time_start}`;
-      
-      const parsedTime = new Date(firstItem.time_start);
-      timeStart.textContent = `${parsedTime.toLocaleString()}`;
+     
       
       dataDiv.appendChild(dkkPerKWh);
     
-      dataDiv.appendChild(timeStart);
+   
 
       container.appendChild(dataDiv);
     } else {
@@ -33,4 +29,11 @@ fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
   .catch(error => console.error('Error:', error));
 
 
-  
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }

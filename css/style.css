@@ -1,109 +1,326 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-*{
-    font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #27282B;
+body {
+  margin: auto;
+  padding: 0;
+  background-color: #27282b;
 }
-
-nav{
-    display: flex;
-
-    background-color: #201E1E;
-    justify-content: space-between;
+main {
+  max-width: 1300px;
+  margin: auto;
+}
+nav {
+  display: flex !important;
+    flex-direction: row ;
+  background-color: #201e1e;
+  justify-content: space-between;
+ 
+  
 }
 
 nav li {
-    flex-direction: column;
-     list-style: none;
-     margin: auto;
-     
+  flex-direction: column;
+  list-style: none;
+  margin: auto;
+  
+}
+
+nav li a {
+  text-decoration: none;
+  color: #ebebeb;
+  margin: auto;
+  text-align: center;
+}
+
+nav img {
+  width: 10vw;
+}
+
+nav,
+h4 {
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-size: 1.3rem;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: #ebebeb;
+  text-transform: uppercase;
+}
+
+.circle {
+  display: grid;
+  background-color: #1e1e1e;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: 5px solid #3b3939;
+}
+
+.dotOne {
+  display: grid;
+  background-color: transparent;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: rgba(0, 128, 0, 0.593) dotted;
+}
+
+.dotTwo {
+  display: grid;
+  background-color: transparent;
+  width: 33vw;
+  height: 33vw;
+  border-radius: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: green dotted;
+}
+
+footer {
+  background-color: #201e1e;
+  margin-top: 200px;
+  padding: 50px;
+  text-align: center;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: 2px solid #27282b;
+  background-color: #201e1e;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.circleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 45vw;
+  height: 45vw;
+}
+
+.circleFrame{
+    background-color: black;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dottedCircle {
+  background-color: transparent;
+  width: 24vw;
+  height: 24vw;
+  border-radius: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border: rgba(0, 128, 0, 0.593) dotted;
+}
+
+p {
+  color: white;
+}
+
+.desktopGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  gap: 100px;
+}
+
+section {
+  width: 100%;
+}
+
+.modalSettings{
+    color: black;
+}
+
+.w3-container{
+    background-color: #27282b;
+    overflow: hidden;
+    height: 500px;
 }
 
 
-nav li a{
-    text-decoration: none;
-    color: #EBEBEB;
+
+ /* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e1e1e;
+    -webkit-transition: .4s;
+    transition: .4s;
     
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: green;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+   
+  }
+  
+  input:checked + .slider {
+    background-color: #1e1e1e;
+    border: 2px dotted green;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+  /* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999;
+   
+  
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 9999;
+    overflow: hidden;
+    
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+@media only screen and (min-width: 1000px) {
+  nav li a {
+    text-decoration: none;
+    color: #ebebeb;
+    display: none;
+  }
+
+  nav h4 {
+    color: #55ec20;
+  }
 }
 
-nav img{
-    width: 10vw;
-}
+@media only screen and (max-width: 1000px) {
+  .sectionOversigt {
+    display: none;
+  }
 
-nav, h1{
-    text-transform: uppercase;
-}
+  .sectionHistorik {
+    display: none;
+  }
 
-/* h2{
-    color: #33B21B;
-} */
+  .desktopGrid {
+    display: flex;
+    flex-direction: column;
+  }
 
-h1{
-    text-align: center;
-    color: #EBEBEB;
-}
-
-.circle{
-    display: grid;
-    background-color: #1E1E1E;
-    width: 60vw;
-    height: 60vw;
-    border-radius: 500px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    border: 5px solid #3B3939;
-}
-
-.dotOne{
-    display: grid;
-    background-color: transparent;
-    width: 55vw;
-    height: 55vw;
-    border-radius: 500px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    border: rgba(0, 128, 0, 0.593) dotted;;
-}
-
-.dotTwo{
-    display: grid;
-    background-color: transparent;
-    width: 48vw;
-    height: 48vw;
-    border-radius: 500px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    border: green dotted;;
-}
-
-
-
-footer{
-    background-color: #201E1E;
-    margin-top: 200px;
-    padding: 50px;
-    text-align: center;
-}
-
-.circleGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.rows{
-    width: 300px;
-    height: 150px;
-    border-radius: 30px;
-
+  .circleGrid{
+    display: none;
+  }
 }
