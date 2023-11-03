@@ -3,9 +3,10 @@
 <head>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/oversigt.js" defer></script>
-    
+    <script src="./js/lowesthighest.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./sw.js" defer></script>
    
     <title>Document</title>
 </head>
@@ -24,17 +25,21 @@
     <li><a href="historik.html"> historik</a></li> 
     <a href="index.html" class="back-button">Tilbage</a>   
 
+
 </nav> 
   
 <main>
 <h2> Oversigt </h2>
     <div class="circleGrid">
-        <div class="dottedCircle"></div>
-        <div class="dottedCircle"></div>   
+        
+        <h2>Højeste Pris</h2>
+        <h2>Lavest Pris</h2>
+        
+        <div class="dottedCircle"><p id="highest-value"></p></div>
+        <div class="dottedCircle"><p id="lowest-value"></p></div>   
 
     </div>
-   <h2>Lavest Pris</h2>
-   <h2>Højeste Pris</h2>
+   
         
             <div id="data-container"></div>
  

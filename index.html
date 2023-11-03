@@ -8,10 +8,12 @@
     <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/oversigt.js" defer></script>
-
+    <script src="./js/lowesthighest.js" defer></script>
+    <script src="./sw.js" defer></script>
     <script src="https://kit.fontawesome.com/0d87557a34.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <link rel="manifest" href="./manifest.json">
+  
 </head>
 
 <body>
@@ -48,12 +50,14 @@
                 <div class="date-container">
                 <p id="time-start"></p> <span> - </span> <p id="time-end"></p>
                 </div>
+                    
                 <div class="circleGrid">
+                    <h3>Laveste</h3><h3>Højeste</h3>
                     <div class="circleFrame">
-                        <div class="dottedCircle"></div>
+                        <div class="dottedCircle"><p id="lowest-value"></p></div>
                     </div>
                     <div class="circleFrame">
-                        <div class="dottedCircle"></div>
+                        <div class="dottedCircle"><p id="highest-value"></p></div>
                     </div>
 
                 </div>
@@ -66,15 +70,7 @@
                <div id="data-container"></div>
 
             </section>
-            <!-- historik -->
-            <section class="sectionHistorik">
-                <h1>Historik</h1>
-                <div class="rows">
-                </div>
-                <div class="rows">
-                </div>
-                <h3>El-priserne d </h3>
-
+           
 
 
 

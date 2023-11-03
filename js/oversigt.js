@@ -6,7 +6,7 @@ fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
       const hours = time.getHours();
       return hours >= 19 || hours <= 3;
     });
-
+    console.log(filteredData);
     const container = document.getElementById('data-container');
 
     for (let i = 0; i < 8; i++) {

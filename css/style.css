@@ -18,6 +18,8 @@ nav {
     flex-direction: row ;
   background-color: #201e1e;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
  
   
 }
@@ -53,6 +55,10 @@ h1 {
   text-align: center;
   color: #ebebeb;
   text-transform: uppercase;
+}
+
+b{
+  color: green;
 }
 
 .circle {
@@ -96,7 +102,7 @@ h1 {
 
 footer {
   background-color: #201e1e;
-  margin-top: 200px;
+  
   padding: 50px;
   text-align: center;
 }
@@ -146,6 +152,7 @@ footer {
 
 .data-row p:first-child {
   font-weight: bold;
+  color: white;
 }
 
 
@@ -169,25 +176,32 @@ footer {
 }
 
 .circleFrame{
-    background-color: black;
+ 
+  background-color: black;
     width: 15vw;
     height: 15vw;
     border-radius: 500px;
-    
+   
 }
 
 .dottedCircle {
-  background-color: transparent;
+  display: flex;
+  flex-direction: column; 
+  background-color: #1e1e1e;
   width: 15vw;
   height: 15vw;
   border-radius: 500px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   
   margin: auto;
   border: rgba(0, 128, 0, 0.593) dotted;
 }
 
 p {
-  color: white;
+  color: #55EC20;
+  font-weight: 1000;
 }
 
 .desktopGrid {
