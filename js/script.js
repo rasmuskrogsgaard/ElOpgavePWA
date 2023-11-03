@@ -2,35 +2,26 @@ fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
   .then(response => response.json())
   .then(data => {
     if (data.length > 0) {
-      
       const firstItem = data[0];
-
-    
       console.log(firstItem);
 
-      const container = document.getElementById('data-container');
+      const dkkPerKWhElement = document.getElementById('dkk-per-kwh');
+      const timeStartElement = document.getElementById('time-start');
+      const timeEndElement = document.getElementById('time-end');
 
-      const dataDiv = document.createElement('div');
+      dkkPerKWhElement.textContent = `${firstItem.DKK_per_kWh} kr pr kwh`;
 
-      const dkkPerKWh = document.createElement('p');
-      dkkPerKWh.textContent = `${firstItem.DKK_per_kWh} DKK pr kwh`;
+      const startTime = new Date(firstItem.time_start);
+      const endTime = new Date(firstItem.time_end);
 
-      const timeStart = document.createElement('p');
-      timeStart.textContent = `${firstItem.time_start}`;
       
-      const parsedTime = new Date(firstItem.time_start);
-      timeStart.textContent = `${parsedTime.toLocaleString()}`;
-      
-      dataDiv.appendChild(dkkPerKWh);
-    
-      dataDiv.appendChild(timeStart);
+      const startTimeFormatted = startTime.toLocaleTimeString('da-DK', { timeStyle: 'short' });
+      const endTimeFormatted = endTime.toLocaleTimeString('da-DK', { timeStyle: 'short' });
 
-      container.appendChild(dataDiv);
+      timeStartElement.textContent = `${startTimeFormatted}`;
+      timeEndElement.textContent = ` ${endTimeFormatted}`;
     } else {
       console.error('error');
     }
   })
   .catch(error => console.error('Error:', error));
-
-
-  

@@ -1,39 +1,37 @@
 fetch('https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json')
   .then(response => response.json())
   .then(data => {
-    if (data.length > 0) {
-      
-      const firstItem = data[0];
+    const filteredData = data.filter(item => {
+      const time = new Date(item.time_start);
+      const hours = time.getHours();
+      return hours >= 19 || hours <= 3;
+    });
 
-    
-      console.log(firstItem);
+    const container = document.getElementById('data-container');
 
-      const container = document.getElementById('data-container');
+    for (let i = 0; i < 8; i++) {
+      if (i < filteredData.length) {
+        const item = filteredData[i];
 
-      const dataDiv = document.createElement('div');
+        const row = document.createElement('div');
+        row.classList.add('data-row');
 
-      const dkkPerKWh = document.createElement('p');
-      dkkPerKWh.textContent = `${firstItem.DKK_per_kWh} kr`;
+        const timeStart = document.createElement('p');
+        const time = new Date(item.time_start);
+        const hours = time.getHours();
+        const minutes = time.getMinutes();
+        const formattedHours = hours.toString().padStart(2, '0');
+        const formattedMinutes = minutes.toString().padStart(2, '0');
+        timeStart.textContent = `kl.${formattedHours}:${formattedMinutes}`;
 
-     
-      
-      dataDiv.appendChild(dkkPerKWh);
-    
-   
+        const dkkPerKWh = document.createElement('p');
+        dkkPerKWh.textContent = `${item.DKK_per_kWh} kr`;
 
-      container.appendChild(dataDiv);
-    } else {
-      console.error('error');
+        row.appendChild(timeStart);
+        row.appendChild(dkkPerKWh);
+
+        container.appendChild(row);
+      }
     }
   })
   .catch(error => console.error('Error:', error));
-
-
-  function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
